@@ -1,0 +1,89 @@
+
+/* Banner Container */
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    overflow: hidden;
+    transition: 0.5s;
+
+  }
+/* Background Overlay */
+  .banner::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    content: '';
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+  }
+
+  .banner .movie {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 100px;
+    overflow: hidden;
+  }
+
+  .bgImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    font-size: 8rem;
+    opacity: 0;
+    transition: 1s;
+    visibility: hidden;
+  }
+
+  .bgImg.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .banner-container {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+        text-align: center; /* Center text on small screens */
+    }
+
+    .banner-image {
+        margin-bottom: 20px; /* Add space below image */
+    }
+
+    .banner-text h2 {
+        font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+
+    .banner-text p {
+        font-size: 1rem; /* Adjust paragraph size */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .banner {
+        padding: 40px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .banner-container {
+        padding: 15px;
+    }
+  }

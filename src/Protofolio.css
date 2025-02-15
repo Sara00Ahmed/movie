@@ -1,0 +1,121 @@
+/* ======= Global Styling ======= */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #f8f9fa;
+  --text-color: #333;
+  --hover-color: #0056b3;
+  --card-bg: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: var(--text-color);
+}
+
+/* ======= Protofolio Section ======= */
+.protofolio-container {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  color: white;
+}
+
+/* Title Styling */
+.protofolio-container h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.protofolio-container h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+/* ======= Projects Grid ======= */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+/* ======= Individual Project Card ======= */
+.project-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 5px 15px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ======= Project Image ======= */
+.project-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 5px solid var(--primary-color);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ======= Project Title ======= */
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 20px;
+  text-align: center;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.project-card:hover .project-title {
+  color: var(--primary-color);
+}
+
+/* ======= Hover Overlay Effect ======= */
+.project-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover::after {
+  opacity: 1;
+}
+
+/* ======= Responsive Design ======= */
+@media (max-width: 768px) {
+  .project-grid {
+      grid-template-columns: 1fr; /* Stack projects in one column */
+  }
+
+  .project-card {
+      width: 90%;
+      margin: auto;
+  }
+}

@@ -1,0 +1,45 @@
+
+main {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 0 120px;
+    background: #000000;
+}
+/*
+main::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: -80px;
+  width: 100%;
+  height:200px;
+  filter:blur(50px);
+  background: #000000;
+} */
+
+/* section .section-title {
+    color: #ffffff;
+    position: relative;
+    font-weight: 500;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+section .section-title::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -30px;
+    height: 5px;
+    width: 50px;
+    background: linear-gradient(
+        90deg,
+        var(--primary),
+        var(--primary),
+    transparent
+);
+    z-index: 1000;
+} */

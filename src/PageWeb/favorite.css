@@ -1,0 +1,59 @@
+.favorites {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 0;
+    background: #000000;
+    color: #ffffff;
+  }
+
+  .favorites-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .movie-grid .movie-card {
+    width: calc(33.33% - 20px); /* 3 cards per row */
+  }
+
+  @media (max-width: 768px) {
+    .movie-grid .movie-card {
+      width: calc(50% - 20px); /* 2 cards per row for smaller screens */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .movie-grid .movie-card {
+      width: 100%; /* 1 card per row on very small screens */
+    }
+  }
+
+/* // navitem style */
+  .favorite-icon {
+    position: relative;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    color: red;
+}
+
+.favorite-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 3px 6px;
+}

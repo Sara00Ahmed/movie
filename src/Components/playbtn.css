@@ -1,0 +1,95 @@
+
+/* Play Button Animation */
+/* .playBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 87, 34, 1);
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 6px 15px rgba(255, 87, 34, 0.8);
+    animation: pulse 2s infinite;
+}
+
+.playBtn:hover {
+    transform: scale(1.2);
+    background: #ff3d00;
+    box-shadow: 0px 8px 20px rgba(255, 87, 34, 1);
+} */
+
+/* @keyframes pulse {
+    0% { box-shadow: 0 0 10px rgba(255, 87, 34, 0.6); }
+    50% { box-shadow: 0 0 20px rgba(255, 87, 34, 1); }
+    100% { box-shadow: 0 0 10px rgba(255, 87, 34, 0.6); }
+} */
+
+.banner .trailer {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0);
+    z-index: 1000;
+}
+
+.banner .trailer.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.trailer p {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+
+.banner .playBtn {
+    position: relative;
+    color: #ffffff;
+    width: 80px;
+    height: 80px;
+    transition: 1s;
+    z-index: 1000;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer ! important;
+}
+
+.banner .playBtn ion-icon {
+    font-size: 4rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.banner .playBtn::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    border: 10px solid #ffffff;
+    background: transparent;
+    animation: button is linear infinite;
+}
+
+@keyframes button {
+    0%,
+    100% {
+        opacity: 0.3;
+        filter: blur(4px);
+    }
+
+    50% {
+        opacity: 1;
+        filter: blur(10px);
+    }
+}

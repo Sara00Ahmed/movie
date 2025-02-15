@@ -1,0 +1,22 @@
+.countBtn {
+    padding: 12px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(255, 75, 43, 0.4);
+}
+
+.countBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(255, 75, 43, 0.6);
+}
+
+.countBtn:active {
+    transform: translateY(1px);
+    box-shadow: 0px 2px 5px rgba(255, 75, 43, 0.3);
+}

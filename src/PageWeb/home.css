@@ -1,0 +1,145 @@
+/* ===== Global Styles ===== */
+:root {
+    --primary: #090808; /* Netflix red for accents */
+    --background: #000000; /* Dark background */
+    --text: #ffffff; /* White text */
+    --card-bg: #1a1a1a; /* Darker background for cards */
+    --card-text: #cccccc; /* Light gray for card text */
+    --hover-effect: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    width: 100%;
+    min-height: 60vh;
+    padding: 0 0 120px;
+    transition: transform 0.3s ease;
+    overflow-y: scroll;
+     overflow-x: hidden;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+/* .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+} */
+
+
+
+/* ===== Typography ===== */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text);
+    margin: 0;
+    font-weight: bold;
+}
+
+p {
+    color: var(--card-text);
+    line-height: 1.6;
+}
+
+/* ===== Layout ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== Movie Cards ===== */
+.movie-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.movie-card h1 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+    color: var(--text);
+}
+
+.movie-card p {
+    font-size: 1rem;
+    color: var(--card-text);
+    margin: 10px 0;
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text);
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.section-title::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -15px;
+    height: 4px;
+    width: 60px;
+    background: linear-gradient(90deg, var(--primary), var(--primary), transparent);
+    z-index: 1000;
+    border-radius: 2px;
+}
+
+/* ===== Buttons ===== */
+.button {
+    background: var(--primary);
+    color: var(--text);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+    background: #ff0a16; /* Slightly brighter red on hover */
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .movie-card {
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .movie-card h1 {
+        font-size: 1.5rem;
+    }
+
+    .movie-card p {
+        font-size: 0.9rem;
+    }
+}

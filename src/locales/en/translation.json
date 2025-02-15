@@ -1,0 +1,12 @@
+{
+    "welcome": "Welcome",
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "email_required": "Email is required",
+    "invalid_email": "Invalid email",
+    "password_required": "Password is required",
+    "invalid_password": "Password must be at least 8 characters long"
+  }
+

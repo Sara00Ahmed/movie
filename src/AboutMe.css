@@ -1,0 +1,35 @@
+.about-container {
+    display: flex; /* Use Flexbox */
+     gap: 40px; /* Space between columns */
+     align-items: start; /* Align items at the top */
+}
+
+
+.about-container h2 {
+    flex: 0 0 200px; /* Fixed width for the title */
+    font-size: 2.5rem; /* Large font size */
+    color: #2c3e50; /* Dark blue color */
+    text-align: left;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgb(252, 252, 252),
+                 2px 2px 4px whitesmoke;
+
+}
+
+ .about-container p {
+    flex: 1; /* Allow the paragraph to take up remaining space */
+    font-size: 1.1rem; /* Font size */
+    line-height: 1.8;
+    color: #ffffff;
+    margin: 0;
+
+}
+
+.about-container img {
+    flex: 0 0 200px; /* Fixed width for the image */
+    max-width: 100%; /* Ensure the image doesn't overflow its container */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+

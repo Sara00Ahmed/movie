@@ -1,0 +1,149 @@
+/* ========================= */
+/*       HEADER STYLING      */
+/* ========================= */
+
+:root {
+  --primary: #ff5722; /* Define primary theme color */
+}
+
+/* Header container */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* position: fixed; */
+  padding: 30px 100px;
+  transition:0.5s;
+
+  /* background: rgba(0, 0, 0, 0.7); */
+  /* backdrop-filter: blur(10px); */
+  /* transition: all 0.3s ease-in-out;
+  /* background-color: rgb(0, 0, 0);
+  color: white; */
+  /* padding: 10px 20px;
+  text-align: center; */
+  z-index: 10000;
+}
+
+
+/* Scrolled Header Effect */
+.header.scrolled {
+  border-bottom: 2px solid var(--primary);
+  border-image: linear-gradient(90deg, transparent, var(--primary), transparent) 30;
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.6); /* Darker overlay when scrolled */
+  /* transition: all 0.3s ease-in-out; */
+  padding: 10px 100px;
+}
+
+/* Navigation Bar */
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Logo */
+.logo {
+  font-family: 'Racing Sans One', cursive;
+  color: #ffffff;
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-weight: 800;
+  text-decoration: none;
+  text-transform: uppercase;
+  /* transition: transform 0.3s ease-in-out; */
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+/* Navbar */
+.navbar {
+  /* list-style: none; */
+  display: flex;
+  gap: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+.navbar li {
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: var(--primary); /* Highlight color on hover */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .header {
+      padding: 15px 50px;
+  }
+
+  .navbar {
+      gap: 20px;
+  }
+
+  .logo {
+      font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+      padding: 10px 30px;
+  }
+
+  .navbar {
+      flex-direction: column;
+      gap: 15px;
+      display: none; /* Hide navbar on smaller screens */
+  }
+
+  .navbar.active {
+      display: flex;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.9);
+      padding: 15px;
+      border-radius: 8px;
+      flex-direction: column;
+  }
+
+  .logo {
+      font-size: 24px;
+  }
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+      display: block;
+  }
+}

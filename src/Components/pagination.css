@@ -1,0 +1,50 @@
+/* Pagination Container */
+.pagination-container {
+    display: flex;
+    justify-content: center; /* Center the pagination */
+    margin: 20px 0; /* Add some margin above and below */
+  }
+  
+  /* Pagination List */
+  .pagination {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for horizontal alignment */
+  }
+  
+  /* Page Item */
+  .page-item {
+    margin: 0 5px; /* Space between page items */
+  }
+  
+  /* Page Link */
+  .page-link {
+    display: inline-block;
+    padding: 10px 15px; /* Add padding for clickable area */
+    text-decoration: none; /* Remove underline from links */
+    color: #007bff; /* Default link color */
+    border: 1px solid transparent; /* Border for active state */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+  }
+  
+  /* Active Link Style */
+  .page-link.active {
+    background-color: #007bff; /* Active background color */
+    color: white; /* Active text color */
+  }
+  
+  /* Hover Effect */
+  .page-link:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    color: white; /* Change text color on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .page-link {
+      padding: 8px; /* Smaller padding on mobile devices */
+      font-size: 14px; /* Smaller font size on mobile devices */
+    }
+  }
+  

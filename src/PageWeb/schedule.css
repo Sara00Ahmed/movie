@@ -1,0 +1,126 @@
+.schedule {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 0 120px;
+    background: #000000;
+    color: #ffffff; /* Ensure text is readable on dark background */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+section .filters {
+    color: #ffffff;
+    position: relative;
+    font-weight: 500;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+section .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+}
+
+section .section-title::after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -30px;
+    height: 5px;
+    width: 50px;
+    background: linear-gradient(90deg, var(--primary), var(--primary), transparent);
+    /* z-index: 1000; */
+}
+
+.container-fluid {
+    padding: 0 15px; /* Add padding to the container for better spacing */
+}
+
+.movie-card {
+    background: #333333;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.movie-card:hover {
+    transform: scale(1.05); /* Add hover effect to scale the movie card */
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.movie-card h1 {
+    font-size: 1.8rem;
+    margin-top: 15px;
+    color: #ffffff;
+}
+
+.movie-card p {
+    font-size: 1rem;
+    color: #cccccc;
+}
+
+.filters p {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .schedule {
+        padding: 0 0 60px; /* Adjust bottom padding for smaller screens */
+    }
+
+    .movie-card {
+        margin: 10px 0; /* Adjust card margin for mobile */
+        padding: 15px;  /* Reduce card padding */
+    }
+
+    .section-title {
+        font-size: 2rem; /* Adjust section title font size */
+    }
+}
+
+
+
+
+
+.schedule .filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.schedule .filters li {
+    color: #ffffff;
+    cursor: pointer;
+    padding: 10px 25px;
+    background: #191919;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.schedule .filters li:hover,
+.schedule .filters li.active {
+    background: var(--primary);
+}
+

@@ -1,0 +1,25 @@
+.trend-card {
+    position: relative;
+}
+
+.trend-card a{
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 10px ;
+    background: var(--primary);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.trend-card a:hover{
+    background: #191919;
+}

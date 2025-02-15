@@ -1,0 +1,59 @@
+
+.footer {
+    background-image: url('/footer-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px 20px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: auto;
+
+}
+
+.footer p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color:#ffffff;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.social-icons ion-icon {
+    font-size: 2rem;
+    color: #ffffff;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.social-icons ion-icon:hover {
+    transform: scale(1.2);
+    color: var(--primary); /* Change to your primary theme color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer p {
+        font-size: 1rem;
+    }
+
+    .social-icons ion-icon {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,33 @@
+.banner .date {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    transition: 1s;
+    transform: scale(0);
+    z-index: 1000;
+}
+
+/* .banner:hover .date {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+} */
+
+.banner .date.active {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.banner .date h2 {
+    font-size: 7rem;
+    font-family: 'Racing Sans One', cursive;
+    color: #ffffff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-mask: linear-gradient(#000000 0 0), linear-gradient(#000000 0 0);
+    -webkit-mask-clip: text , padding-box;
+    -webkit-mask-composite: xor;
+}
